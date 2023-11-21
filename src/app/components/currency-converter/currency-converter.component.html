@@ -1,0 +1,48 @@
+<div class="container">
+  <div id="firstCurrency">
+    <img alt="flag"
+         [src]="getFlagImageUrl(firstCurrency)"
+         (click)="swapCurrencies(true)">
+    <select [(ngModel)]="firstCurrency"
+            (ngModelChange)="onFirstCurrencyChange()">
+      <option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+  <div class="amount-container">
+    <input #amountInput
+           type="number"
+           class="amount-input"
+           min="0" max="1000000"
+           pattern="^[0-9]+(\.[0-9]{1,4})?$"
+           [(ngModel)]="firstAmount"
+           (ngModelChange)="onFirstCurrencyChange()"/>
+  </div>
+  <button class="swap-button" #swapButton (click)="onSwapClick()">
+    <img alt=""
+         class="swap-icon "
+         src="assets/loop.svg">
+  </button>
+  <div class="amount-container bottom">
+    <input #amountInput
+           min="0" max="1000000"
+           class="amount-input left"
+           pattern="^[0-9]+(\.[0-9]{1,4})?$"
+           type="text"
+           [(ngModel)]="secondAmount"
+           (ngModelChange)="onSecondCurrencyChange()">
+  </div>
+
+  <div id="secondCurrency">
+    <img alt="flag"
+         [src]="getFlagImageUrl(secondCurrency)"
+         (click)="swapCurrencies(false)">
+    <select [(ngModel)]="secondCurrency"
+            (ngModelChange)="onSecondCurrencyChange()">
+      <option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+</div>

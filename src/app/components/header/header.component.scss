@@ -1,0 +1,47 @@
+p {
+  margin-left: -10px;
+  margin-top: -5px;
+  width: 55px;
+  border-radius: 100px;
+}
+
+.currency-flag-uah {
+  background: url('../../../assets/uah/image.png') no-repeat center center;
+}
+
+.currency-flag-usd {
+  background: url('../../../assets/usd/image.png') no-repeat center center;
+}
+
+.currency-flag-eur {
+  background: url('../../../assets/eur/image.png') no-repeat center center;
+}
+
+.currency-flag {
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+}
+
+.align-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin-left: -60px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+}
+
+span {
+  position: relative;
+  height: 50px;
+  top: 5px;
+  margin-left: 35px;
+  font-weight: bold;
+}
